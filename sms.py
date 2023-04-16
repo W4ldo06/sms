@@ -3,24 +3,16 @@ from random import choice
 from string import ascii_lowercase
 from bs4 import BeautifulSoup
 from colorama import Fore, Style
-from time import sleep
 
 class SendSms():
     adet = 0
-    toplam_sms = 1
     
-   
-    def __init__(self, phone, phone2, phone3, phone4, phone5, mail):
+    def __init__(self, phone, mail):
         self.phone = str(phone)
-        self.phone2 = str(phone2)
-        self.phone3 = str(phone3)
-        self.phone4 = str(phone4)
-        self.phone5 = str(phone5)
         if len(mail) != 0:
             self.mail = mail
         else:
             self.mail = ''.join(choice(ascii_lowercase) for i in range(19))+"@gmail.com"
-            
     
     
 
